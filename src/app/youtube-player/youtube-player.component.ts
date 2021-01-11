@@ -11,13 +11,14 @@ import { DomSanitizer } from '@angular/platform-browser';
 })
 export class YoutubePlayerComponent implements OnInit, OnDestroy {
   song: any;
-  sub: Subscription;
+  sub: Subscription | undefined;
   constructor(
     private youtubeService: YoutubeService,
     private activatedRouter: ActivatedRoute,
     private domSanitizer: DomSanitizer
   ) { }
 
+  // tslint:disable-next-line:typedef
   ngOnInit() {
     this.sub = this.activatedRouter.paramMap.subscribe((paramMap: ParamMap) => {
       const id = paramMap.get('id');
@@ -25,12 +26,15 @@ export class YoutubePlayerComponent implements OnInit, OnDestroy {
     });
   }
 
+  // tslint:disable-next-line:typedef
   getSrc() {
     const url = 'https://www.youtube.com/embed/' + this.song.id;
     return this.domSanitizer.bypassSecurityTrustResourceUrl(url);
   }
 
+  // tslint:disable-next-line:typedef
   ngOnDestroy() {
+    // @ts-ignore
     this.sub.unsubscribe();
   }
 

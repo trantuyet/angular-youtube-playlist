@@ -10,6 +10,7 @@ export class AppComponent {
   title = 'angular-service-router';
 
   constructor(private router: Router) {}
+  // tslint:disable-next-line:typedef
   gotoTimelines() {
     this.router.navigate(['/timelines']);
   }

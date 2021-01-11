@@ -1,6 +1,6 @@
-import { TestBed, inject } from '@angular/core/testing';
+import {TestBed, inject} from '@angular/core/testing';
 
-import { YoutubeService } from './youtube.service';
+import {YoutubeService} from './youtube.service';
 
 describe('YoutubeService', () => {
   beforeEach(() => {

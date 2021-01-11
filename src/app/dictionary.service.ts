@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 
 export interface IWord {
   key: string;
@@ -25,7 +25,9 @@ export class DictionaryService {
       meaning: 'tuyết'
     }
   ];
-  constructor() { }
+
+  constructor() {
+  }
 
   search(word: string): string {
     if (!word) {

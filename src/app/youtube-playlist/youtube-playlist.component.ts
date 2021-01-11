@@ -10,6 +10,7 @@ export class YoutubePlaylistComponent implements OnInit {
 
   constructor(public youtubeService: YoutubeService) { }
 
+  // tslint:disable-next-line:typedef
   ngOnInit() {
   }
 

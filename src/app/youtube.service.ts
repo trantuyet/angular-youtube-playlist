@@ -5,13 +5,14 @@ import { Injectable } from '@angular/core';
 })
 export class YoutubeService {
   playlist = [
-    {id: 'CX11yw6YL1w', song: 'Céline Dion - Ashes (from the Deadpool 2 Motion Picture Soundtrack)'},
-    {id: 'HBYirj2c_jw', song: 'Deadpool 2 - Take on Me'},
-    {id: 'N6O2ncUKvlg', song: 'Nelly - Just A Dream'},
-    {id: 'uelHwf8o7_U', song: 'Eminem - Love The Way You Lie ft. Rihanna'},
-    {id: 'WpYeekQkAdc', song: 'The Black Eyed Peas - Where Is The Love?'}
+    {id: 'aatr_2MstrI', song: 'Clean Bandit - Symphony (feat. Zara Larsson) [Official Video]'},
+    {id: 'HM2nQ9wMwHo', song: '[Vietsub+Lyric] 𝑳𝒆𝒚𝒍𝒂 - 𝑴𝒆𝒔𝒕𝒐'},
+    {id: 'oWSlQQKZ4IY', song: 'Dăm ba cách HACK SẬP một trang web - Hack cùng Code Dạo'},
+    {id: 'f0bbDFRYD_A', song: 'XXXTENTACION - changes'},
+    {id: '4dUxiMfO9Ys', song: 'Avicii greatest Hits Full Album 2020 - Best Songs Of Avicii\n'}
   ];
   constructor() { }
+  // tslint:disable-next-line:typedef
   find(id: string) {
     return this.playlist.find(item => item.id === id);
   }
